@@ -1,23 +1,7 @@
-'use client';
-
 import PageBanner from '@/components/PageBanner';
 import Image from 'next/image';
-import { useState } from 'react';
 
 export default function Contacto() {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    mensaje: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
-  };
-
   return (
     <main>
       <PageBanner 
@@ -28,64 +12,72 @@ export default function Contacto() {
         ]} 
       />
 
-      <section className="py-20 bg-gray-900">
+      <section id="formulario" className="py-20 bg-gray-900 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Info Box */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-8">CONTACTO</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Nombre *"
-                    required
-                    className="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700"
-                    value={formData.nombre}
-                    onChange={(e) => setFormData({...formData, nombre: e.target.value})}
-                  />
+              <h2 className="text-3xl font-bold text-white mb-8">CONTACTA CON NOSOTROS</h2>
+              <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                <p className="text-gray-300 text-lg mb-8">
+                  ¿Quieres más información sobre nuestras clases de karate? ¡Estaremos encantados de atenderte! Puedes contactarnos de las siguientes formas:
+                </p>
+                
+                {/* Email */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-red-700 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold mb-1">Envíanos un correo</h3>
+                    <p className="text-gray-400 text-sm mb-2">Responderemos lo antes posible</p>
+                    <a href="mailto:info@shotokanrinconada.es" className="text-red-500 hover:text-red-400 font-medium">
+                      info@shotokanrinconada.es
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email *"
-                    required
-                    className="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
+
+                {/* Phone */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-red-700 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold mb-1">Llámanos</h3>
+                    <p className="text-gray-400 text-sm mb-2">Atención telefónica en horario de clases</p>
+                    <a href="tel:955790451" className="text-red-500 hover:text-red-400 font-medium">
+                      955 790 451
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Teléfono"
-                    className="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700"
-                    value={formData.telefono}
-                    onChange={(e) => setFormData({...formData, telefono: e.target.value})}
-                  />
+
+                {/* Visit */}
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-700 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold mb-1">Visítanos en persona</h3>
+                    <p className="text-gray-400 text-sm mb-2">Ven a conocernos y prueba una clase gratis</p>
+                    <p className="text-gray-300">
+                      Calle Miguel de Mañara Nº 2E<br />
+                      41300 San José de la Rinconada, Sevilla
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <textarea
-                    placeholder="Mensaje *"
-                    required
-                    rows={5}
-                    className="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 resize-none"
-                    value={formData.mensaje}
-                    onChange={(e) => setFormData({...formData, mensaje: e.target.value})}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-red-700 text-white px-8 py-3 rounded font-bold hover:bg-red-800 transition-colors"
-                >
-                  ENVIAR MENSAJE
-                </button>
-              </form>
+              </div>
             </div>
 
             {/* Map and Info */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-8">CONTACTO</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">AQUÍ NOS ENCONTRAMOS</h2>
               
               {/* Map */}
               <div className="h-64 bg-gray-800 rounded-lg mb-8 overflow-hidden shadow border border-gray-700">
@@ -98,32 +90,6 @@ export default function Contacto() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              </div>
-
-              {/* Contact Info */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
-                <h3 className="text-xl font-bold text-red-600 mb-4">Shotokan Rinconada</h3>
-                <div className="space-y-3 text-gray-400">
-                  <p className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span>Calle Miguel de Mañara Nº 2E<br />41300 San José de la Rinconada, Sevilla</span>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:955790451" className="text-red-600 hover:text-red-600">955 790 451</a>
-                  </p>
-                  <p className="flex items-center gap-3">
-                    <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <a href="mailto:info@shotokanrinconada.es" className="text-red-600 hover:text-red-600">info@shotokanrinconada.es</a>
-                  </p>
-                </div>
               </div>
             </div>
           </div>

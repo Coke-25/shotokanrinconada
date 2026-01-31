@@ -1,140 +1,180 @@
-'use client';
-
 import PageBanner from '@/components/PageBanner';
-import Link from 'next/link';
-import { useState } from 'react';
-
-const clases = [
-  {
-    id: 1,
-    title: "KARATE INFANTIL 1",
-    category: "karate",
-    description: "Clases para los más pequeños, iniciación al karate.",
-    image: "👦",
-    color: "from-red-500 to-orange-500"
-  },
-  {
-    id: 2,
-    title: "KARATE INFANTIL 2",
-    category: "karate",
-    description: "Nivel intermedio para niños con conocimientos básicos.",
-    image: "👧",
-    color: "from-orange-500 to-yellow-500"
-  },
-  {
-    id: 3,
-    title: "KARATE INFANTIL 3",
-    category: "karate",
-    description: "Nivel avanzado para niños con experiencia.",
-    image: "🥋",
-    color: "from-yellow-500 to-green-500"
-  },
-  {
-    id: 4,
-    title: "KARATE ADULTOS",
-    category: "karate",
-    description: "Clases de karate para adultos de todos los niveles.",
-    image: "🥋",
-    color: "from-gray-600 to-gray-800"
-  },
-  {
-    id: 5,
-    title: "DEFENSA PERSONAL",
-    category: "defensa",
-    description: "Aprende técnicas de defensa personal efectivas.",
-    image: "🛡️",
-    color: "from-blue-500 to-blue-700"
-  },
-  {
-    id: 6,
-    title: "PREPARACIÓN FÍSICA",
-    category: "fitness",
-    description: "Mejora tu condición física con nuestros entrenamientos.",
-    image: "💪",
-    color: "from-purple-500 to-purple-700"
-  }
-];
+import Image from 'next/image';
 
 export default function Clases() {
-  const [filter, setFilter] = useState('todas');
-
-  const filteredClases = filter === 'todas' 
-    ? clases 
-    : clases.filter(c => c.category === filter);
-
   return (
     <main>
       <PageBanner 
-        title="NUESTRAS CLASES" 
+        title="CLASES" 
         breadcrumbs={[
           { label: 'Inicio', href: '/' },
-          { label: 'NUESTRAS CLASES' }
+          { label: 'CLASES' }
         ]} 
       />
 
-      <section className="py-20 bg-gray-900">
+      {/* Clases Infantiles */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button 
-              onClick={() => setFilter('todas')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'todas' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
-            >
-              TODAS LAS CLASES
-            </button>
-            <button 
-              onClick={() => setFilter('karate')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'karate' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
-            >
-              Karate
-            </button>
-            <button 
-              onClick={() => setFilter('defensa')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'defensa' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
-            >
-              Defensa personal
-            </button>
-            <button 
-              onClick={() => setFilter('fitness')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'fitness' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
-            >
-              Preparación física
-            </button>
-          </div>
-
-          {/* Classes Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredClases.map((clase) => (
-              <div key={clase.id} className="bg-gray-800 rounded-lg overflow-hidden group hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-700">
-                <div className={`h-48 bg-gradient-to-br ${clase.color} flex items-center justify-center`}>
-                  <span className="text-7xl">{clase.image}</span>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                KARATE INFANTIL
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Clases para Niños
+              </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                En nuestras clases infantiles, los más pequeños aprenden karate de forma divertida y segura. Desarrollan disciplina, coordinación y confianza en sí mismos mientras se divierten con ejercicios adaptados a su edad.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Horarios</h4>
+                    <p className="text-gray-600">Lunes, Miércoles y Viernes: 17:00 - 18:00</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{clase.title}</h3>
-                  <p className="text-gray-400 mb-4">{clase.description}</p>
-                  <Link 
-                    href="/contacto" 
-                    className="inline-block bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 transition-colors text-sm font-bold"
-                  >
-                    MÁS INFORMACIÓN
-                  </Link>
+                
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Edad</h4>
+                    <p className="text-gray-600">De 5 a 14 años</p>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+            
+            <div className="bg-gray-100 rounded-2xl overflow-hidden relative min-h-80">
+              <Image
+                src="/images/karate-ninos-card.jpg"
+                alt="Karate para niños"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* VEN A SHOTOKAN Section */}
-      <section className="py-16 bg-red-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">VEN A SHOTOKAN</h2>
-          <Link 
-            href="/contacto" 
-            className="inline-block bg-white text-red-600 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
-          >
-            CONTACTAR
-          </Link>
+      {/* Clases Adultos */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 bg-gray-800 rounded-2xl overflow-hidden relative min-h-80 border border-gray-700">
+              <Image
+                src="/images/karate-adultos-card.jpg"
+                alt="Karate para adultos"
+                fill
+                className="object-cover"
+              />
+            </div>
+            
+            <div className="order-1 md:order-2">
+              <div className="inline-block bg-red-900/50 text-red-400 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                KARATE ADULTOS
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Clases para Adultos
+              </h2>
+              <p className="text-gray-400 text-lg mb-8">
+                Nunca es tarde para empezar. Nuestras clases de adultos están diseñadas para todos los niveles, desde principiantes hasta avanzados. Mejora tu forma física, aprende defensa personal y descubre el arte del karate.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-gray-700">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Horarios</h4>
+                    <p className="text-gray-400">Lunes, Miércoles y Viernes: 20:00 - 21:30</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg border border-gray-700">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white">Edad</h4>
+                    <p className="text-gray-400">A partir de 15 años</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gimnasio */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+              GIMNASIO
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Entrena a tu ritmo
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Además de las clases de karate, disponemos de un <span className="font-semibold text-gray-800">gimnasio completamente equipado</span> abierto para todo el mundo. No hace falta practicar karate para usar nuestras instalaciones.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">💪</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Máquinas de musculación</h3>
+              <p className="text-gray-600">Equipamiento completo para trabajar todos los grupos musculares.</p>
+            </div>
+            
+            <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🏃</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Zona de cardio</h3>
+              <p className="text-gray-600">Cintas de correr, bicicletas estáticas y elípticas.</p>
+            </div>
+            
+            <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">⏰</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Horario flexible</h3>
+              <p className="text-gray-600">Abierto de lunes a viernes en horario amplio para que entrenes cuando mejor te venga.</p>
+            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              ¿Quieres conocer nuestras instalaciones?
+            </h3>
+            <p className="text-blue-200 text-lg mb-6">
+              Ven a visitarnos sin compromiso y te enseñamos todo lo que tenemos para ofrecerte
+            </p>
+            <a 
+              href="/contacto#formulario" 
+              className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
+            >
+              CONTACTAR
+            </a>
+          </div>
         </div>
       </section>
     </main>

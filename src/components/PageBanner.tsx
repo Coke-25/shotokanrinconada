@@ -7,7 +7,7 @@ interface PageBannerProps {
 
 export default function PageBanner({ title, breadcrumbs }: PageBannerProps) {
   return (
-    <div className="relative bg-gray-900 pt-32 pb-16">
+    <div className="relative bg-gray-900 pt-20 pb-4 md:pt-32 md:pb-16">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
