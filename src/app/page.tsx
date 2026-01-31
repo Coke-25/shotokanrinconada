@@ -82,15 +82,10 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/shotokan_header.jpeg"
-            alt="Shotokan Rinconada Background"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
+        />
         <div className="relative container mx-auto px-4 pt-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
