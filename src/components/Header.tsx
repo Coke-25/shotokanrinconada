@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -8,34 +9,33 @@ export default function Header() {
   const [isClasesOpen, setIsClasesOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
-      {/* Top bar */}
-      <div className="bg-red-600 text-white text-center py-2 text-sm">
-        <span className="font-semibold">MENÚ PRINCIPAL</span>
-      </div>
-      
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       {/* Main navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">SR</span>
-            </div>
-            <span className="text-white font-bold text-xl hidden md:block">SHOTOKAN RINCONADA</span>
+            <Image
+              src="/images/logo.png"
+              alt="Shotokan Rinconada Logo"
+              width={50}
+              height={50}
+              className="rounded-full"
+            />
+            <span className="text-gray-900 font-bold text-xl hidden md:block">SHOTOKAN RINCONADA</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-white hover:text-red-500 transition-colors font-medium">
+            <Link href="/" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               INICIO
             </Link>
-            <Link href="/club-shotokan" className="text-white hover:text-red-500 transition-colors font-medium">
+            <Link href="/club-shotokan" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               CLUB SHOTOKAN
             </Link>
             <div className="relative group">
               <button 
-                className="text-white hover:text-red-500 transition-colors font-medium flex items-center gap-1"
+                className="text-gray-700 hover:text-red-600 transition-colors font-medium flex items-center gap-1"
                 onMouseEnter={() => setIsClasesOpen(true)}
                 onMouseLeave={() => setIsClasesOpen(false)}
               >
@@ -45,29 +45,29 @@ export default function Header() {
                 </svg>
               </button>
               <div 
-                className={`absolute top-full left-0 bg-black/95 py-2 min-w-48 transition-all ${isClasesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+                className={`absolute top-full left-0 bg-white shadow-lg py-2 min-w-48 transition-all rounded-lg ${isClasesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
                 onMouseEnter={() => setIsClasesOpen(true)}
                 onMouseLeave={() => setIsClasesOpen(false)}
               >
-                <Link href="/clases" className="block px-4 py-2 text-white hover:text-red-500 hover:bg-white/10">
+                <Link href="/clases" className="block px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50">
                   Todas las Clases
                 </Link>
-                <Link href="/profesores" className="block px-4 py-2 text-white hover:text-red-500 hover:bg-white/10">
+                <Link href="/profesores" className="block px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50">
                   PROFESORES
                 </Link>
               </div>
             </div>
-            <Link href="/contacto" className="text-white hover:text-red-500 transition-colors font-medium">
+            <Link href="/contacto" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               CONTACTO
             </Link>
-            <a href="tel:955790451" className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">
+            <a href="tel:955790451" className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800 transition-colors">
               955 790 451
             </a>
           </div>
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-gray-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,13 +82,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
-            <Link href="/" className="block py-2 text-white hover:text-red-500">INICIO</Link>
-            <Link href="/club-shotokan" className="block py-2 text-white hover:text-red-500">CLUB SHOTOKAN</Link>
-            <Link href="/clases" className="block py-2 text-white hover:text-red-500">NUESTRAS CLASES</Link>
-            <Link href="/profesores" className="block py-2 text-white hover:text-red-500 pl-4">→ PROFESORES</Link>
-            <Link href="/contacto" className="block py-2 text-white hover:text-red-500">CONTACTO</Link>
-            <a href="tel:955790451" className="block py-2 text-red-500 font-bold">955 790 451</a>
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+            <Link href="/" className="block py-2 text-gray-700 hover:text-red-600">INICIO</Link>
+            <Link href="/club-shotokan" className="block py-2 text-gray-700 hover:text-red-600">CLUB SHOTOKAN</Link>
+            <Link href="/clases" className="block py-2 text-gray-700 hover:text-red-600">NUESTRAS CLASES</Link>
+            <Link href="/profesores" className="block py-2 text-gray-700 hover:text-red-600 pl-4">→ PROFESORES</Link>
+            <Link href="/contacto" className="block py-2 text-gray-700 hover:text-red-600">CONTACTO</Link>
+            <a href="tel:955790451" className="block py-2 text-red-600 font-bold">955 790 451</a>
           </div>
         )}
       </nav>

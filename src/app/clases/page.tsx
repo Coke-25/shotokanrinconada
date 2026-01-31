@@ -72,31 +72,31 @@ export default function Clases() {
         ]} 
       />
 
-      <section className="py-20 bg-zinc-900">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button 
               onClick={() => setFilter('todas')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'todas' ? 'bg-red-600 text-white' : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'}`}
+              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'todas' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
             >
               TODAS LAS CLASES
             </button>
             <button 
               onClick={() => setFilter('karate')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'karate' ? 'bg-red-600 text-white' : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'}`}
+              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'karate' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
             >
               Karate
             </button>
             <button 
               onClick={() => setFilter('defensa')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'defensa' ? 'bg-red-600 text-white' : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'}`}
+              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'defensa' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
             >
               Defensa personal
             </button>
             <button 
               onClick={() => setFilter('fitness')}
-              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'fitness' ? 'bg-red-600 text-white' : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700'}`}
+              className={`px-6 py-2 rounded font-bold transition-colors ${filter === 'fitness' ? 'bg-red-700 text-white' : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'}`}
             >
               Preparación física
             </button>
@@ -105,7 +105,7 @@ export default function Clases() {
           {/* Classes Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredClases.map((clase) => (
-              <div key={clase.id} className="bg-zinc-800 rounded-lg overflow-hidden group hover:shadow-2xl transition-all hover:-translate-y-1">
+              <div key={clase.id} className="bg-gray-800 rounded-lg overflow-hidden group hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-700">
                 <div className={`h-48 bg-gradient-to-br ${clase.color} flex items-center justify-center`}>
                   <span className="text-7xl">{clase.image}</span>
                 </div>
@@ -114,7 +114,7 @@ export default function Clases() {
                   <p className="text-gray-400 mb-4">{clase.description}</p>
                   <Link 
                     href="/contacto" 
-                    className="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors text-sm font-bold"
+                    className="inline-block bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 transition-colors text-sm font-bold"
                   >
                     MÁS INFORMACIÓN
                   </Link>
@@ -126,7 +126,7 @@ export default function Clases() {
       </section>
 
       {/* VEN A SHOTOKAN Section */}
-      <section className="py-16 bg-red-600">
+      <section className="py-16 bg-red-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">VEN A SHOTOKAN</h2>
           <Link 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import BenefitCard from '@/components/BenefitCard';
 
 export default function Home() {
@@ -80,19 +81,19 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-black">
+      <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555597673-b21d5c935865?w=1920')" }}
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
         />
         <div className="relative container mx-auto px-4 pt-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-              <p className="text-red-500 font-medium mb-2">KARATE EN SAN JOSÉ DE LA RINCONADA</p>
+              <p className="text-red-600 font-medium mb-2">KARATE EN SAN JOSÉ DE LA RINCONADA</p>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 SHOTOKAN<br />RINCONADA
               </h1>
-              <a href="tel:955790451" className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors">
+              <a href="tel:955790451" className="inline-flex items-center gap-2 bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -100,11 +101,14 @@ export default function Home() {
               </a>
             </div>
             <div className="hidden md:block">
-              {/* Placeholder for karate image */}
               <div className="relative">
-                <div className="w-80 h-96 bg-gradient-to-br from-red-600 to-red-800 rounded-lg mx-auto flex items-center justify-center">
-                  <span className="text-white text-6xl">🥋</span>
-                </div>
+                <Image
+                  src="/images/logo.png"
+                  alt="Karate para niños en San José de la Rinconada"
+                  width={320}
+                  height={400}
+                  className="mx-auto rounded-lg"
+                />
               </div>
             </div>
           </div>
@@ -112,22 +116,27 @@ export default function Home() {
       </section>
 
       {/* Niños y Adultos Section */}
-      <section className="py-20 bg-zinc-900">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Niños */}
-            <div className="bg-zinc-800 rounded-lg overflow-hidden group hover:shadow-2xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center">
-                <span className="text-8xl">👦</span>
+            <div className="bg-gray-50 rounded-lg overflow-hidden group hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="h-64 relative bg-gray-300">
+                <Image
+                  src="/images/karate-ninos.png"
+                  alt="Karate para niños"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">NIÑOS</h3>
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">NIÑOS</h3>
+                <p className="text-gray-600 mb-6">
                   En nuestras clases lo pasan genial aprendiendo con ejercicios adaptados a sus capacidades.
                 </p>
                 <Link 
                   href="/clases" 
-                  className="inline-block bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors"
+                  className="inline-block bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors"
                 >
                   1ª CLASE GRATUITA
                 </Link>
@@ -135,18 +144,23 @@ export default function Home() {
             </div>
 
             {/* Adultos */}
-            <div className="bg-zinc-800 rounded-lg overflow-hidden group hover:shadow-2xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                <span className="text-8xl">🥋</span>
+            <div className="bg-gray-50 rounded-lg overflow-hidden group hover:shadow-xl transition-shadow border border-gray-100">
+              <div className="h-64 relative bg-gray-300">
+                <Image
+                  src="/images/karate-adultos.png"
+                  alt="Karate para adultos"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">ADULTOS</h3>
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">ADULTOS</h3>
+                <p className="text-gray-600 mb-6">
                   Te enseñamos este arte marcial y los diferentes beneficios que brinda en el crecimiento personal.
                 </p>
                 <Link 
                   href="/clases" 
-                  className="inline-block bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors"
+                  className="inline-block bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors"
                 >
                   PRUEBA GRATIS
                 </Link>
@@ -157,13 +171,13 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               PRACTICA KARATE Y DISFRUTA DE SUS BENEFICIOS
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="text-gray-400 max-w-3xl mx-auto">
               El Karate es una de las artes marciales más antiguas y está demostrado que mejora la aptitud física y transmite valores como la perseverancia, el autocontrol y la responsabilidad.
             </p>
           </div>
@@ -182,24 +196,29 @@ export default function Home() {
       </section>
 
       {/* Ven a Shotokan Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">VEN A</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-red-500">SHOTOKAN</h3>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">VEN A</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-red-600">SHOTOKAN</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Karate para Niños */}
             <div className="relative group overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
-                <span className="text-9xl">👦</span>
+              <div className="h-80 relative">
+                <Image
+                  src="/images/karate-ninos-card.jpg"
+                  alt="Karate para niños"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <h4 className="text-2xl font-bold text-white mb-4">KARATE PARA NIÑOS</h4>
                 <Link 
                   href="/clases" 
-                  className="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors"
+                  className="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors"
                 >
                   MÁS INFORMACIÓN
                 </Link>
@@ -211,14 +230,19 @@ export default function Home() {
 
             {/* Karate para Adultos */}
             <div className="relative group overflow-hidden rounded-lg">
-              <div className="h-80 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                <span className="text-9xl">🥋</span>
+              <div className="h-80 relative">
+                <Image
+                  src="/images/karate-adultos-card.jpg"
+                  alt="Karate para adultos"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <h4 className="text-2xl font-bold text-white mb-4">KARATE PARA ADULTOS</h4>
                 <Link 
                   href="/clases" 
-                  className="bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors"
+                  className="bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors"
                 >
                   MÁS INFORMACIÓN
                 </Link>
