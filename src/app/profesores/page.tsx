@@ -24,7 +24,7 @@ export default function Profesores() {
             <div className="text-center">
               <div className="w-48 h-48 rounded-full overflow-hidden relative border-4 border-red-700 shadow-xl mx-auto mb-6">
                 <Image
-                  src="/images/profesor-pedro.jpg"
+                  src="images/profesor-pedro.jpg"
                   alt="Pedro Bueno Gallardo"
                   fill
                   className="object-cover"
@@ -153,7 +153,7 @@ export default function Profesores() {
             <div className="order-1 md:order-2 text-center">
               <div className="w-48 h-48 rounded-full overflow-hidden relative border-4 border-red-700 shadow-xl mx-auto mb-6">
                 <Image
-                  src="/images/profesor-borja.jpg"
+                  src="images/profesor-borja.jpg"
                   alt="Borja Bueno Castillo"
                   fill
                   className="object-cover"
@@ -174,7 +174,7 @@ export default function Profesores() {
             <div className="text-center">
               <div className="w-48 h-48 rounded-full overflow-hidden relative border-4 border-red-700 shadow-xl mx-auto mb-6">
                 <Image
-                  src="/images/profesor-jesus.jpg"
+                  src="images/profesor-jesus.jpg"
                   alt="Jesús León"
                   fill
                   className="object-cover"

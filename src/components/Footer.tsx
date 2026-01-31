@@ -77,7 +77,7 @@ export default function Footer() {
           {/* Logo - right side on desktop, centered on mobile */}
           <div className="flex justify-center md:justify-end">
             <Image
-              src="/images/logo.png"
+              src="images/logo.png"
               alt="Shotokan Rinconada Logo"
               width={100}
               height={100}

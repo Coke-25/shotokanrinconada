@@ -100,7 +100,7 @@ export default function Contacto() {
             <div className="flex flex-wrap justify-center items-center gap-8">
               <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
                 <Image
-                  src="/images/fed-sevillana.png"
+                  src="images/fed-sevillana.png"
                   alt="Federación Sevillana de Karate"
                   width={96}
                   height={64}
@@ -109,7 +109,7 @@ export default function Contacto() {
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
                 <Image
-                  src="/images/fed-andaluza.png"
+                  src="images/fed-andaluza.png"
                   alt="Federación Andaluza de Karate"
                   width={96}
                   height={64}
@@ -118,7 +118,7 @@ export default function Contacto() {
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
                 <Image
-                  src="/images/fed-espanola.png"
+                  src="images/fed-espanola.png"
                   alt="Federación Española de Karate"
                   width={96}
                   height={64}
@@ -127,7 +127,7 @@ export default function Contacto() {
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
                 <Image
-                  src="/images/wkf.png"
+                  src="images/wkf.png"
                   alt="World Karate Federation"
                   width={96}
                   height={64}
@@ -136,7 +136,7 @@ export default function Contacto() {
               </div>
               <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
                 <Image
-                  src="/images/partner-bc.png"
+                  src="images/partner-bc.png"
                   alt="Fisioterapia BC"
                   width={96}
                   height={64}

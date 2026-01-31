@@ -84,7 +84,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
+          style={{ backgroundImage: "url('images/shotokan_header.jpeg')" }}
         />
         <div className="relative container mx-auto px-4 pt-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="relative">
                 <Image
-                  src="/images/logo.png"
+                  src="images/logo.png"
                   alt="Karate para niños en San José de la Rinconada"
                   width={320}
                   height={400}
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-80 relative rounded-lg overflow-hidden">
               <Image
-                src="/images/linea-sport.jpg"
+                src="images/linea-sport.jpg"
                 alt="Gimnasio Linea Sport San José de la Rinconada"
                 fill
                 className="object-cover"
@@ -217,7 +217,7 @@ export default function Home() {
       <section className="relative py-32 bg-gray-900">
         <div className="absolute inset-0">
           <Image
-            src="/images/gimnasio-tranquilo.jpg"
+            src="images/gimnasio-tranquilo.jpg"
             alt="Instalaciones Shotokan Rinconada"
             fill
             className="object-cover opacity-40"

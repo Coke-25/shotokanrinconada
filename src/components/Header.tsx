@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="images/logo.png"
               alt="Shotokan Rinconada Logo"
               width={50}
               height={50}
