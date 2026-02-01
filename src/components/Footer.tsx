@@ -90,7 +90,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="border-t border-gray-800 py-4 bg-gray-950">
         <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          <p>Web hecha por <a href="https://github.com/coke-25" target="_blank" className="text-red-600 hover:text-red-600">Coke</a></p>
+          <p>🛠️ Web desarrollada por <a href="https://github.com/coke-25" target="_blank" className="text-red-600 hover:text-red-600">Coke</a></p>
         </div>
       </div>
     </footer>

@@ -30,3 +30,13 @@ body {
   color: var(--foreground);
   font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
+
+.hero-background-position-adjustment {
+  background-position-x: -105px;
+}
+
+@media (width >= 48rem) { 
+  .hero-background-position-adjustment {
+    background-position-x: center;
+  }
+}
