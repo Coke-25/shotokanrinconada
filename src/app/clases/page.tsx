@@ -36,7 +36,7 @@ export default function Clases() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Horarios</h4>
-                    <p className="text-gray-600">Lunes, Miércoles y Viernes: 17:00 - 18:00</p>
+                    <p className="text-gray-600">De Lunes a Jueves: 17:45 - 18:45</p>
                   </div>
                 </div>
                 
@@ -48,7 +48,60 @@ export default function Clases() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Edad</h4>
-                    <p className="text-gray-600">De 5 a 14 años</p>
+                    <p className="text-gray-600">De 4 a 8 años</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-100 rounded-2xl overflow-hidden relative min-h-80">
+              <Image
+                src="images/karate-infantil.png"
+                alt="Karate para niños"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                KARATE JUVENIL
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Clases para Jóvenes
+              </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                En nuestras clases para jóvenes, los alumnos aprenden karate de forma dinámica y segura. Desarrollan disciplina, coordinación, fuerza y confianza en sí mismos mientras entrenan con ejercicios adaptados a su edad y nivel, en un ambiente motivador que fomenta el respeto y el compañerismo.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Horarios</h4>
+                    <p className="text-gray-600">De Lunes a Jueves: 19:00 - 20:00</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div className="bg-red-700 text-white p-3 rounded-lg">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Edad</h4>
+                    <p className="text-gray-600">De 8 a 13 años</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +164,7 @@ export default function Clases() {
                   </div>
                   <div>
                     <h4 className="font-bold text-white">Edad</h4>
-                    <p className="text-gray-400">A partir de 15 años</p>
+                    <p className="text-gray-400">A partir de 14 años</p>
                   </div>
                 </div>
               </div>
