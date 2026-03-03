@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "Shotokan Rinconada - Karate en San José de la Rinconada",
   description: "Club de Karate Shotokan en San José de la Rinconada, Sevilla. Clases para niños y adultos. Más de 30 años de experiencia.",
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
   },
 };
 
