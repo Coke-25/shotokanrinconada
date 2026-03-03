@@ -82,18 +82,21 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
-        <div 
-          className="absolute inset-0 bg-cover md:bg-center opacity-40 hero-background-position-adjustment"
-          style={{ backgroundImage: "url('images/shotokan_header.jpeg')" }}
-        />
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover md:bg-center opacity-45 hero-background-position-adjustment"
+            style={{ backgroundImage: "url('images/shotokan_header.jpeg')" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/30 to-black/35" />
+        </div>
         <div className="relative container mx-auto px-4 pt-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-              <p className="text-red-600 font-medium mb-2">KARATE EN SAN JOSÉ DE LA RINCONADA</p>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <p className="text-red-500 font-semibold tracking-wide mb-3">KARATE EN SAN JOSÉ DE LA RINCONADA</p>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
                 SHOTOKAN<br />RINCONADA
               </h1>
-              <a href="tel:955790451" className="inline-flex items-center gap-2 bg-red-700 text-white px-6 py-3 rounded hover:bg-red-800 transition-colors">
+              <a href="tel:955790451" className="inline-flex items-center gap-2 bg-red-700 text-white px-6 py-3 rounded border border-red-500/50 shadow-lg shadow-black/40 hover:bg-red-800 transition-colors">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -107,7 +110,7 @@ export default function Home() {
                   alt="Karate para niños en San José de la Rinconada"
                   width={320}
                   height={400}
-                  className="mx-auto rounded-lg"
+                  className="mx-auto rounded-lg drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)]"
                 />
               </div>
             </div>
@@ -178,7 +181,7 @@ export default function Home() {
                 En Shotokan Rinconada tienes a tu disposición una sala equipada con todo lo necesario para el trabajo de musculación y ejercicio cardiovascular.
                 No hace falta unirse a las clases de karate para utilizar el gimnasio.
               </p>
-              
+
               <div className="grid gap-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
@@ -247,8 +250,8 @@ export default function Home() {
           {/* Timeline years */}
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
             {["1984", "1986", "1989", "1993", "Actualidad"].map((year, index) => (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={`#year-${year}`}
                 className="bg-gray-800 text-white px-4 py-2 rounded font-bold shadow border border-gray-700 hover:bg-red-700 hover:border-red-700 transition-colors cursor-pointer"
               >
@@ -308,7 +311,7 @@ export default function Home() {
         </div>
       </section>
 
-            {/* Ven a Shotokan Section */}
+      {/* Ven a Shotokan Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center">
@@ -321,8 +324,8 @@ export default function Home() {
       <div className="bg-red-700 py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Y DISFRUTA DEL KARATE</h2>
-          <Link 
-            href="/contacto#formulario" 
+          <Link
+            href="/contacto#formulario"
             className="inline-block bg-white text-red-600 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
           >
             ¡QUIERO APUNTARME!
