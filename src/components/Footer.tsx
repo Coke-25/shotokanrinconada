@@ -4,19 +4,6 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* CTA Section */}
-      <div className="bg-red-700 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Y DISFRUTA DEL KARATE</h2>
-          <Link 
-            href="/contacto#formulario" 
-            className="inline-block bg-white text-red-600 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
-          >
-            ¡QUIERO APUNTARME!
-          </Link>
-        </div>
-      </div>
-
       {/* Footer content */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
@@ -84,13 +71,6 @@ export default function Footer() {
               className="rounded-full"
             />
           </div>
-        </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="border-t border-gray-800 py-4 bg-gray-950">
-        <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          <p>🛠️ Web desarrollada por <a href="https://github.com/coke-25" target="_blank" className="text-red-600 hover:text-red-600">Coke</a></p>
         </div>
       </div>
     </footer>

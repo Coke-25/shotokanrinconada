@@ -117,13 +117,21 @@ export default function Home() {
 
       {/* Niños y Adultos Section */}
       <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 flex justify-center flex-col gap-12 items-center">
           {/* Info paragraph */}
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-gray-600 text-lg">
               Todas nuestras clases comienzan con un <span className="font-semibold text-gray-800">calentamiento</span> para preparar el cuerpo y finalizan con <span className="font-semibold text-gray-800">estiramientos</span> para favorecer la flexibilidad. <span className="font-semibold text-gray-800">No necesitas ningún conocimiento previo</span> para empezar a entrenar, ¡te esperamos!
             </p>
           </div>
+
+          <Image
+            src="images/chavales-karate.jpg"
+            width={700}
+            height={400}
+            alt="Compañeros haciendo karate"
+            className='overflow-hidden rounded-2xl'
+          />
         </div>
       </section>
 
@@ -309,6 +317,18 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="bg-red-700 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Y DISFRUTA DEL KARATE</h2>
+          <Link 
+            href="/contacto#formulario" 
+            className="inline-block bg-white text-red-600 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
+          >
+            ¡QUIERO APUNTARME!
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
