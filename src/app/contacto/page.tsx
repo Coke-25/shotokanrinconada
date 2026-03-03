@@ -98,7 +98,7 @@ export default function Contacto() {
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-white text-center mb-8">Federaciones y Colaboradores</h3>
             <div className="flex flex-wrap justify-center items-center gap-8">
-              <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
+              <div className="bg-gray-800 p-4 h-32 flex items-center justify-center rounded-lg shadow border border-gray-700">
                 <Image
                   src="images/fed-sevillana.png"
                   alt="Federación Sevillana de Karate"
@@ -107,7 +107,7 @@ export default function Contacto() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
+              <div className="bg-gray-800 p-4 h-32 flex items-center justify-center rounded-lg shadow border border-gray-700">
                 <Image
                   src="images/fed-andaluza.png"
                   alt="Federación Andaluza de Karate"
@@ -116,7 +116,7 @@ export default function Contacto() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
+              <div className="bg-gray-800 p-4 h-32 flex items-center justify-center rounded-lg shadow border border-gray-700">
                 <Image
                   src="images/fed-espanola.png"
                   alt="Federación Española de Karate"
@@ -125,7 +125,7 @@ export default function Contacto() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
+              <div className="bg-gray-800 p-4 h-32 flex items-center justify-center rounded-lg shadow border border-gray-700">
                 <Image
                   src="images/wkf.png"
                   alt="World Karate Federation"
@@ -134,9 +134,9 @@ export default function Contacto() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700">
+              <div className="bg-gray-800 p-4 h-32 flex items-center justify-center rounded-lg shadow border border-gray-700">
                 <Image
-                  src="images/partner-bc.png"
+                  src="images/clinicabc.png"
                   alt="Fisioterapia BC"
                   width={96}
                   height={64}
