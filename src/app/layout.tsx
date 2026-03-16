@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shotokanrinconada.es"),
   title: "Shotokan Rinconada - Karate en San José de la Rinconada",
   description: "Club de Karate Shotokan en San José de la Rinconada, Sevilla. Clases para niños y adultos. Más de 30 años de experiencia.",
   icons: {

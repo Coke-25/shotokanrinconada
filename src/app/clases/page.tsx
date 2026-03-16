@@ -56,7 +56,7 @@ export default function Clases() {
             
             <div className="bg-gray-100 rounded-2xl overflow-hidden relative min-h-80">
               <Image
-                src="images/karate-infantil.png"
+                src="/images/karate-infantil.png"
                 alt="Karate para niños"
                 fill
                 className="object-cover"
@@ -109,7 +109,7 @@ export default function Clases() {
             
             <div className="bg-gray-100 rounded-2xl overflow-hidden relative min-h-80">
               <Image
-                src="images/karate-ninos-card.jpg"
+                src="/images/karate-ninos-card.jpg"
                 alt="Karate para niños"
                 fill
                 className="object-cover"
@@ -125,7 +125,7 @@ export default function Clases() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 bg-gray-800 rounded-2xl overflow-hidden relative min-h-80 border border-gray-700">
               <Image
-                src="images/karate-adultos-card.jpg"
+                src="/images/karate-adultos-card.jpg"
                 alt="Karate para adultos"
                 fill
                 className="object-cover"
@@ -222,7 +222,7 @@ export default function Clases() {
               Ven a visitarnos sin compromiso y te enseñamos todo lo que tenemos para ofrecerte
             </p>
             <a 
-              href="/contacto#formulario" 
+              href="/contacto/#formulario" 
               className="inline-block bg-white text-slate-700 font-bold px-8 py-3 rounded hover:bg-gray-100 transition-colors"
             >
               CONTACTAR

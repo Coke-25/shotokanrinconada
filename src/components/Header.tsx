@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Shotokan Rinconada Logo"
               width={50}
               height={50}
@@ -29,13 +29,13 @@ export default function Header() {
             <Link href="/" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               INICIO
             </Link>
-            <Link href="/clases" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+            <Link href="/clases/" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               CLASES
             </Link>
-            <Link href="/profesores" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+            <Link href="/profesores/" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               PROFESORES
             </Link>
-            <Link href="/contacto" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+            <Link href="/contacto/" className="text-gray-700 hover:text-red-600 transition-colors font-medium">
               CONTACTO
             </Link>
             <a href="tel:955790451" className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800 transition-colors">
@@ -62,9 +62,9 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <Link href="/" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>INICIO</Link>
-            <Link href="/clases" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>CLASES</Link>
-            <Link href="/profesores" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>PROFESORES</Link>
-            <Link href="/contacto" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>CONTACTO</Link>
+            <Link href="/clases/" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>CLASES</Link>
+            <Link href="/profesores/" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>PROFESORES</Link>
+            <Link href="/contacto/" className="block py-2 text-gray-700 hover:text-red-600" onClick={() => setIsMenuOpen(false)}>CONTACTO</Link>
             <a href="tel:955790451" className="block py-2 text-red-600 font-bold" onClick={() => setIsMenuOpen(false)}>955 790 451</a>
           </div>
         )}

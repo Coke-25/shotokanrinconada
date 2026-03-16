@@ -31,17 +31,17 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/clases" className="text-gray-400 hover:text-red-600 transition-colors">
+                  <Link href="/clases/" className="text-gray-400 hover:text-red-600 transition-colors">
                     CLASES
                   </Link>
                 </li>
                 <li>
-                  <Link href="/profesores" className="text-gray-400 hover:text-red-600 transition-colors">
+                  <Link href="/profesores/" className="text-gray-400 hover:text-red-600 transition-colors">
                     PROFESORES
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contacto" className="text-gray-400 hover:text-red-600 transition-colors">
+                  <Link href="/contacto/" className="text-gray-400 hover:text-red-600 transition-colors">
                     CONTACTO
                   </Link>
                 </li>
@@ -64,7 +64,7 @@ export default function Footer() {
           {/* Logo - right side on desktop, centered on mobile */}
           <div className="flex justify-center md:justify-end">
             <Image
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Shotokan Rinconada Logo"
               width={100}
               height={100}
