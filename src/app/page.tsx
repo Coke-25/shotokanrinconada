@@ -85,7 +85,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover md:bg-center opacity-45 hero-background-position-adjustment"
-            style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
+            style={{ backgroundImage: "url('images/shotokan_header.jpeg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/30 to-black/35" />
         </div>
