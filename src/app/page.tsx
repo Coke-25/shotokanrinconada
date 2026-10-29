@@ -85,7 +85,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover md:bg-center opacity-45 hero-background-position-adjustment"
-            style={{ backgroundImage: "url('/shotokanrinconada/images/shotokan_header.jpeg')" }}
+            style={{ backgroundImage: "url('/images/shotokan_header.jpeg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/30 to-black/35" />
         </div>
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="hidden md:block">
               <div className="relative">
                 <Image
-                  src="/shotokanrinconada/images/logo.png"
+                  src="/images/logo.png"
                   alt="Karate para niños en San José de la Rinconada"
                   width={320}
                   height={400}
@@ -129,7 +129,7 @@ export default function Home() {
           </div>
 
           <Image
-            src="/shotokanrinconada/images/chavales-karate.jpg"
+            src="/images/chavales-karate.jpg"
             width={700}
             height={400}
             alt="Compañeros haciendo karate"
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-80 relative rounded-lg overflow-hidden">
               <Image
-                src="/shotokanrinconada/images/linea-sport.jpg"
+                src="/images/linea-sport.jpg"
                 alt="Gimnasio Linea Sport San José de la Rinconada"
                 fill
                 className="object-cover"
@@ -228,7 +228,7 @@ export default function Home() {
       <section className="relative py-32 bg-gray-900">
         <div className="absolute inset-0">
           <Image
-            src="/shotokanrinconada/images/gimnasio-tranquilo.jpg"
+            src="/images/gimnasio-tranquilo.jpg"
             alt="Instalaciones Shotokan Rinconada"
             fill
             className="object-cover opacity-40"

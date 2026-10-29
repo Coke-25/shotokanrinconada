@@ -3,9 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  // GitHub Pages serves the site below /shotokanrinconada/.
-  basePath: "/shotokanrinconada",
-  assetPrefix: "/shotokanrinconada/",
+  basePath: "/",
+  assetPrefix: "/",
   images: {
     unoptimized: true,
   },
